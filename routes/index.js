@@ -2,13 +2,9 @@ const express = require('express');
 
 const router = express.Router();
 
-// Review
-// const Review = require('../controllers/Review');
-// router.get('/GetReviews', Review.GetReviews);
-// router.post('/AddReview', Review.AddReview);
-
-// // Contact
-// const Contact = require('../controllers/Contact');
-// router.post('/Contact', Contact.ContactHandler);
+// User
+const User = require('./controllers/User');
+router.post('/user/register', User.Register);
+router.post('/user/login', User.Login);
 
 module.exports = router;

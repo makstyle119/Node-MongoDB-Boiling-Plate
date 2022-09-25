@@ -1,4 +1,5 @@
 const express = require('express');
+const { PORT, API_URL, NODE_ENV } = require('./config');
 const Connect = require('./Database/MongoDB');
 const routes = require('./routes');
 require('dotenv/config');
@@ -6,8 +7,8 @@ require('dotenv/config');
 const app = express();
 
 // env Declaration
-const port = process.env.PORT || 5000;
-const api = process.env.API_URL || 'api/v1';
+const port = PORT || 5000;
+const api = API_URL || 'api/v1';
 
 // Body Parser Middleware
 app.use(express.json());
@@ -16,7 +17,7 @@ app.use(express.json());
 app.use(`${api}`, routes);
 
 // Get
-if (process.env.NODE_ENV == 'production') {
+if (NODE_ENV == 'production') {
   app.get('/', (req, res) => {
     res.send('BACKEND LIVE Production !');
   });
