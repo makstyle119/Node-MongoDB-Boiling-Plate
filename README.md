@@ -1,5 +1,11 @@
 # **Node-MongoDB-Boiling-Plate**
 
+clone **locally**
+
+```
+git clone https://github.com/makstyle119/Node-MongoDB-Boiling-Plate.git
+```
+
 To **start** Working on this template first you have you run the **command** to install all the require packages
 
 ```
