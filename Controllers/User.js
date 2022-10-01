@@ -1,9 +1,9 @@
 const bcrypt = require('bcrypt');
-const { User } = require('../../models/user');
-const { NODE_ENV, SECRET_KEY } = require('../../config');
+const { User } = require('../models/user');
+const { NODE_ENV, SECRET_KEY } = require('../config');
 var jwt = require('jsonwebtoken');
-require('../../Constant');
-require('../../log');
+require('../Constant');
+require('../log');
 
 // For Password
 const saltRounds = 10;
