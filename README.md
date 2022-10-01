@@ -1,5 +1,11 @@
 # **Node-MongoDB-Boiling-Plate**
 
+clone **locally**
+
+```
+git clone https://github.com/makstyle119/Node-MongoDB-Boiling-Plate.git
+```
+
 To **start** Working on this template first you have you run the **command** to install all the require packages
 
 ```
@@ -16,8 +22,10 @@ and Put this code inside of the file( replace the dummy lines with actual code).
 
 ```
 PORT=5000
-API_URL = '/api/v1'
-NODE_ENV = 'Development'
+API_URL='/api/v1'
+NODE_ENV='Development'
+SECRET_KEY='Your Secret Key'
+MONGO_URI='Your MongoDB URL'
 ```
 
 To **start** the application
@@ -32,10 +40,20 @@ npm run dev
 **folder Structure**
 
 ```
-└── routes
+└── config
     └── index.js
+└── Constant
+    └── index.js
+└── Controllers
+    └── User.js
 └── Database
     └── MongoDB.js
+└── log
+    └── index.js
+└── models
+    └── user.js
+└── routes
+    └── index.js
 └── app.js
 └── .env (that you have to create)
 ```
